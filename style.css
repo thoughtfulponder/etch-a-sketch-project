@@ -1,0 +1,34 @@
+/** {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  height: auto;
+  flex: 0 0 25%;
+  background-color: red;
+  border: 1px solid black;
+}
+/*.grid-rows {
+  border: 1px solid black;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.grid-cells {
+  border: 1px solid red;
+  height: auto;
+  flex: 0 0 auto;
+}*/
