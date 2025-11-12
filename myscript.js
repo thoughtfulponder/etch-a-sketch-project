@@ -1,34 +1,28 @@
 const container = document.querySelector("#container");
 
-function makeDivs(nums) {
+function makeGrid(nums) {
   for (var i = 0; i < nums; i++) {
-    let row = document.createElement("div");
-    row.classList.add("item");
-    container.appendChild(row);
+    const cells = document.createElement("div");
+    cells.classList.add("grid-item");
+    container.appendChild(cells);
   }
 }
 
-makeDivs(4);
+makeGrid(16);
 
-/*function makeRows(nums) {
-  for (let i = 0; i < nums; i++) {
-    let gridRows = document.createElement("div");
-    gridRows.classList.add("grid-rows");
-    container.appendChild(gridRows);
-  }
-}*/
-
-/*function makeGrids(nums) {
+/*function makeGrid(nums) {
   for (var i = 0; i < nums; i++) {
     let gridCells = document.createElement("div");
-    gridCells.classList.add("grid-cells");
+    gridCells.className = "grid-cells";
+    gridCells.innerHTML = i;
     for (var j = 0; j < nums; j++) {
       let gridRows = document.createElement("div");
-      gridRows.classList.add("grid-rows");
+      gridRows.className = "grid-rows";
+      gridRows.innerHTML = j;
       gridCells.appendChild(gridRows);
     }
-    container.appendChild(gridCells)
+    container.appendChild(gridCells);
   }
 }
 
-makeGrids(16);*/
+makeGrid(2);*/

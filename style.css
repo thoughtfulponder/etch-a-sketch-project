@@ -1,34 +1,72 @@
-/** {
+/*html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-}*/
-
 .container {
+  min-height: 100%;
+  width: 400px;
+  height: 400px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  border: 1px solid black;
 }
 
-.item {
-  height: auto;
-  flex: 0 0 25%;
-  background-color: red;
-  border: 1px solid black;
-}
-/*.grid-rows {
-  border: 1px solid black;
-  height: auto;
-  flex: 0 0 auto;
+.grid-item {
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  font-size: 1.2em;
+  background-color: lightblue;
+  margin: 2rem;
 }
 
 .grid-cells {
-  border: 1px solid red;
-  height: auto;
-  flex: 0 0 auto;
+  flex: 1;
+  background-color: red;
+  border: 1px solid black;
+  display: flex;
+  flex-basis: calc(50% - 40px);
+  justify-content: center;
+  flex-direction: column;
+}
+
+ .grid-rows {
+  background-color: blue;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.grid2x2 {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid2x2 > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+.grid2x2 > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box { margin: 20px; }
+.box1 { background-color: red; }
+.box2 { background-color: orange; }
+.box3 { background-color: purple; }
+.box4 { background-color: grey; }
