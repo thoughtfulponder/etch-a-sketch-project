@@ -1,6 +1,6 @@
 const container = document.querySelector("#container");
 
-function makeGrid(nums) {
+/*function makeGrid(nums) {
   for (var i = 0; i < nums; i++) {
     const cells = document.createElement("div");
     cells.classList.add("grid-item");
@@ -8,9 +8,9 @@ function makeGrid(nums) {
   }
 }
 
-makeGrid(16);
+makeGrid(16);*/
 
-/*function makeGrid(nums) {
+function makeGrid(nums) {
   for (var i = 0; i < nums; i++) {
     let gridCells = document.createElement("div");
     gridCells.className = "grid-cells";
@@ -25,4 +25,4 @@ makeGrid(16);
   }
 }
 
-makeGrid(2);*/
+// makeGrid(4);
