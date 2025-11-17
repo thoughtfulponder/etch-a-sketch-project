@@ -11,18 +11,14 @@ const container = document.querySelector("#container");
 makeGrid(16);*/
 
 function makeGrid(nums) {
-  for (var i = 0; i < nums; i++) {
+  let value = nums * nums;
+  for (var i = 0; i < value; i++) {
     let gridCells = document.createElement("div");
     gridCells.className = "grid-cells";
-    gridCells.innerHTML = i;
-    for (var j = 0; j < nums; j++) {
-      let gridRows = document.createElement("div");
-      gridRows.className = "grid-rows";
-      gridRows.innerHTML = j;
-      gridCells.appendChild(gridRows);
-    }
+    // gridCells.innerHTML = i;
     container.appendChild(gridCells);
+    gridCells.style.setProperty("flex-basis", `calc(100% / ${nums})`)
   }
 }
 
-// makeGrid(4);
+ makeGrid(16);
