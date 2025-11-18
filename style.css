@@ -3,7 +3,9 @@ body {
   /* height: 100%; */
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #container {
@@ -22,7 +24,11 @@ body {
 .grid-cells {
   /* background-color: red; */
   border: 1px solid black;
-  flex-basis: calc(100% / 2);
+  flex-basis: calc(100% / 16);
   aspect-ratio: 1 / 1;
   box-sizing: border-box;
+}
+
+.grid-cells:hover {
+  background-color: yellow;
 }
