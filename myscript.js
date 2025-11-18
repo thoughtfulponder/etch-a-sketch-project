@@ -10,15 +10,16 @@ const container = document.querySelector("#container");
 
 makeGrid(16);*/
 
-function makeGrid(nums) {
+function makeGrid(nums = 16) {
+  /*nums = prompt("enter a number");*/
   let value = nums * nums;
-  for (var i = 0; i < value; i++) {
+  for (let i = 0; i < value; i++) {
     let gridCells = document.createElement("div");
     gridCells.className = "grid-cells";
     // gridCells.innerHTML = i;
     container.appendChild(gridCells);
-    gridCells.style.setProperty("flex-basis", `calc(100% / ${nums})`)
+    gridCells.style.setProperty("flex-basis", `calc(100% / ${nums})`);
   }
 }
-
- makeGrid(16);
+const btn = document.querySelector(".btn");
+  makeGrid();
