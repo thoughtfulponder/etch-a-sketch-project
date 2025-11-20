@@ -1,5 +1,7 @@
 const container = document.querySelector("#container");
 
+const btn = document.querySelector(".btn");
+
 /*function makeGrid(nums) {
   for (var i = 0; i < nums; i++) {
     const cells = document.createElement("div");
@@ -10,10 +12,13 @@ const container = document.querySelector("#container");
 
 makeGrid(16);*/
 
-
+btn.addEventListener("click", () => {
+  num = prompt("enter a number");
+  makeGrid(num);
+});
 
 function makeGrid(nums = 16) {
-
+  
   let value = nums * nums;
   for (let i = 0; i < value; i++) {
     let gridCells = document.createElement("div");
@@ -22,11 +27,14 @@ function makeGrid(nums = 16) {
     container.appendChild(gridCells);
     gridCells.style.setProperty("flex-basis", `calc(100% / ${nums})`);
   }
+  return nums
 }
-const btn = document.querySelector(".btn");
-btn.addEventListener("change", () => {
-  num = prompt("enter a number");
+console.log(makeGrid(2));
 
-});
+const gridCells = document.querySelector(".grid-cells");
 
-makeGrid();
+
+
+
+
+
