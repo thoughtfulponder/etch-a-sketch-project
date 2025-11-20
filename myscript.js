@@ -12,13 +12,9 @@ const btn = document.querySelector(".btn");
 
 makeGrid(16);*/
 
-btn.addEventListener("click", () => {
-  num = prompt("enter a number");
-  makeGrid(num);
-});
 
 function makeGrid(nums = 16) {
-  
+
   let value = nums * nums;
   for (let i = 0; i < value; i++) {
     let gridCells = document.createElement("div");
@@ -29,9 +25,14 @@ function makeGrid(nums = 16) {
   }
   return nums
 }
-console.log(makeGrid(2));
+console.log(makeGrid());
 
 const gridCells = document.querySelector(".grid-cells");
+
+btn.addEventListener("click", () => {
+  num = prompt("enter a number");
+  makeGrid(num);
+});
 
 
 
