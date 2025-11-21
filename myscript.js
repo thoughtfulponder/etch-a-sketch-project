@@ -29,7 +29,10 @@ console.log(makeGrid());
 
 const gridCells = document.querySelector(".grid-cells");
 
+
+
 btn.addEventListener("click", () => {
+  container.innerHTML = "";
   num = prompt("enter a number");
   makeGrid(num);
 });
