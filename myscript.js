@@ -27,7 +27,7 @@ function makeGrid(nums = 16) {
 }
 console.log(makeGrid());
 
-const gridCells = document.querySelector(".grid-cells");
+const gridCells = document.querySelectorAll(".grid-cells");
 
 
 
