@@ -2,20 +2,8 @@ const container = document.querySelector("#container");
 
 const btn = document.querySelector(".btn");
 
-/*function makeGrid(nums) {
-  for (var i = 0; i < nums; i++) {
-    const cells = document.createElement("div");
-    cells.classList.add("grid-item");
-    container.appendChild(cells);
-  }
-}
-
-makeGrid(16);*/
 
 let gridValue = 16;
-
-
-
 
 function makeGrid(nums = 16) {
 
