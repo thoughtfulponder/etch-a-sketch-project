@@ -32,3 +32,7 @@ body {
 .grid-cells:hover {
   background-color: yellow;
 }
+
+.pressed {
+  background-color: red;
+}
