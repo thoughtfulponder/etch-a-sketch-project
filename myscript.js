@@ -21,14 +21,14 @@ function makeGrid(nums) {
 let grid = makeGrid(gridValue);
 console.log(grid);
 
-/*let gridCells = Array.from(container.childNodes);*/
+/*let gridCells = container.children;*/
 
-let gridCells = document.querySelectorAll(".grid-cells");
+/*let gridCells = document.querySelectorAll(".grid-cells");*/
 
 btn.addEventListener("click", () => {
   for (let i = 0; i < gridCells.length; i++) {
-   /*container.removeChild(gridCells[i]);*/
-   gridCells[i].remove();
+   container.removeChild(gridCells[i]);
+   /*gridCells.remove();*/
  }
   /*container.innerHTML = "";*/
   setTimeout( () => {
@@ -42,27 +42,31 @@ btn.addEventListener("click", () => {
     gridValue = num;
     makeGrid(gridValue);
   }
-  /*gridCells = Array.from(container.childNodes);*/
-  gridCells = document.querySelectorAll(".grid-cells");
-  }, 10);
+  /*gridCells = container.childNodes;*/
+  /*gridCells = document.querySelectorAll(".grid-cells");*/
+  /*gridCells.forEach(cell => {
+  cell.addEventListener("click", () => {
+    cell.classList.add("pressed")
+  });
+});*/
+  }, 100);
   
 });
 
-gridCells = document.querySelectorAll(".grid-cells");
+/*let gridCells = container.children;*/
 
-
-
+let gridCells = document.getElementsByClassName("grid-cells");
 
 /*let gridCells = document.querySelectorAll(".grid-cells");*/
 
 /*let gridCells = Array.from(container.childNodes);*/
 
 
-gridCells.forEach(cell => {
+/*gridCells.forEach(cell => {
   cell.addEventListener("click", () => {
     cell.classList.add("pressed")
   });
-});
+});*/
 
 /*for (let i = 0; i < gridCells.length; i++) {
   gridCells[i].addEventListener("click", () => {
