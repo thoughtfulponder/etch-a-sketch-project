@@ -7,7 +7,7 @@ const btn = document.querySelector(".btn");
 let gridValue = 16;
 
 function makeGrid(nums) {
-  
+
   let value = nums * nums;
   for (let i = 0; i < value; i++) {
     let gridCells = document.createElement("div");
@@ -21,55 +21,37 @@ function makeGrid(nums) {
 let grid = makeGrid(gridValue);
 console.log(grid);
 
-/*let gridCells = container.children;*/
 
-/*let gridCells = document.querySelectorAll(".grid-cells");*/
+
+
 
 btn.addEventListener("click", () => {
-  for (let i = 0; i < gridCells.length; i++) {
-   container.removeChild(gridCells[i]);
-   /*gridCells.remove();*/
- }
-  /*container.innerHTML = "";*/
-  setTimeout( () => {
+  for (let i = gridCells.length - 1; i >= 0; i--) {
+    gridCells[i].remove();
+  }
+
+  setTimeout(() => {
     num = prompt("enter a number");
-  if (num > 100 || num === null || num === "") {
-    alert("please enter a between 1 to 100");
-    gridValue = 16;
-    makeGrid(gridValue);
-  }
-  else {
-    gridValue = num;
-    makeGrid(gridValue);
-  }
-  /*gridCells = container.childNodes;*/
-  /*gridCells = document.querySelectorAll(".grid-cells");*/
-  /*gridCells.forEach(cell => {
-  cell.addEventListener("click", () => {
-    cell.classList.add("pressed")
-  });
-});*/
+    if (num > 100 || num === null || num === "") {
+      alert("please enter a between 1 to 100");
+      gridValue = 16;
+      makeGrid(gridValue);
+    }
+    else {
+      gridValue = num;
+      makeGrid(gridValue);
+    }
+
   }, 100);
-  
+
 });
 
-/*let gridCells = container.children;*/
 
 let gridCells = document.getElementsByClassName("grid-cells");
 
-/*let gridCells = document.querySelectorAll(".grid-cells");*/
 
-/*let gridCells = Array.from(container.childNodes);*/
-
-
-/*gridCells.forEach(cell => {
-  cell.addEventListener("click", () => {
-    cell.classList.add("pressed")
-  });
-});*/
-
-/*for (let i = 0; i < gridCells.length; i++) {
-  gridCells[i].addEventListener("click", () => {
-    gridCells[i].classList.add("pressed");
-  });
-}*/
+container.addEventListener("click", (e) => {
+  if (e.target.classList.contains("grid-cells")) {
+    e.target.classList.add("pressed");
+  }
+});
