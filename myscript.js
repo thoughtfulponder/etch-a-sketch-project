@@ -49,9 +49,17 @@ btn.addEventListener("click", () => {
 
 let gridCells = document.getElementsByClassName("grid-cells");
 
+function randomColor() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+}
+
 
 container.addEventListener("click", (e) => {
   if (e.target.classList.contains("grid-cells")) {
-    e.target.classList.add("pressed");
+    //e.target.classList.add("pressed");
+    e.target.style.backgroundColor = randomColor();
   }
 });
